@@ -1,4 +1,4 @@
-import { JumboTitle } from '../Jumbo-Title/jumbo-title';
+import NextImage from 'next/image';
 import {
   Avatar,
   Badge,
@@ -11,7 +11,7 @@ import {
   Stack,
   Text,
 } from '@mantine/core';
-import NextImage from 'next/image';
+import { JumboTitle } from '../Jumbo-Title/jumbo-title';
 import classes from './testimonial-01.module.css';
 
 type Testimonial = {
@@ -24,22 +24,20 @@ type Testimonial = {
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    quote:
-      `
+    quote: `
         Thanks very much mate, the entire Asset Alley team have been great for us & really appreciate the extra support small business like us particularly need.
     `,
 
-    name: 'Jimmy O\'Rourke',
-    imageUrl:'',
-    company:'COMPANY',
-    alt: 'Jimmy O\'Rourke',
+    name: "Jimmy O'Rourke",
+    imageUrl: '',
+    company: 'COMPANY',
+    alt: "Jimmy O'Rourke",
   },
   {
     quote:
       "I was skeptical at first, but after using this tool for a few weeks, I'm a total convert. It's intuitive, powerful, and has become an essential part of my creative process.",
     name: 'Michael Rodriguez',
-    imageUrl:
-    '',
+    imageUrl: '',
     handle: '@mrodriguez',
     alt: 'Michael Rodriguez',
   },
@@ -47,8 +45,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       'As someone who juggles multiple projects, having a reliable and efficient solution like this has been a game-changer. It streamlines so many tasks and helps me stay organized.',
     name: 'Emily Nakamura',
-    imageUrl:
-      '',
+    imageUrl: '',
     handle: '@enakamura',
     alt: 'Emily Nakamura',
   },
@@ -56,8 +53,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "I've been blown away by the quality of customer support. Whenever I have a question or run into an issue, the team is incredibly responsive and always goes above and beyond to find a solution.",
     name: 'Fatima Hassan',
-    imageUrl:
-      '',
+    imageUrl: '',
     handle: '@fatimah',
     alt: 'Fatima Hassan',
   },
@@ -65,8 +61,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "This product strikes the perfect balance between ease-of-use and advanced functionality. It's accessible for beginners but has the depth to grow with you as your needs evolve.",
     name: 'Priya Patel',
-    imageUrl:
-    '',
+    imageUrl: '',
     handle: '@priya',
     alt: 'Priya Patel',
   },
@@ -74,8 +69,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       'Collaborating with my team has never been smoother thanks to this platform. We can seamlessly share ideas, provide feedback, and keep projects moving forward.',
     name: 'Liam Novak',
-    imageUrl:
-    '',
+    imageUrl: '',
     handle: '@liamnovak',
     alt: 'Liam Novak',
   },
@@ -83,8 +77,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       'I never realized how much time I was wasting on repetitive tasks until I started using this tool. Now I can focus on the creative work that truly matters to me.',
     name: 'Olivia Torres',
-    imageUrl:
-    '',
+    imageUrl: '',
     handle: '@oliviatorres',
     alt: 'Olivia Torres',
   },
@@ -92,8 +85,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       'As a small business owner, I wear many hats and every minute counts. This product has been a lifesaver in automating processes and keeping me organized so I can focus on growing my company.',
     name: 'Marcus Johnson',
-    imageUrl:
-    '',
+    imageUrl: '',
     handle: '@marcus',
     alt: 'Marcus Johnson',
   },
@@ -101,8 +93,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "I've tried countless products promising to simplify my work, but this one actually delivers. The thoughtful design and robust features set it apart from the rest.",
     name: 'David Okafor',
-    imageUrl:
-    '',
+    imageUrl: '',
     handle: '@davidokafor',
     alt: 'David Okafor',
   },

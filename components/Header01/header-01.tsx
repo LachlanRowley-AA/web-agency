@@ -92,10 +92,6 @@ export const Header01 = ({
         gap="xs"
         wrap="nowrap"
     >
-    <Group gap={0} style={{ flexShrink: 0 }}>
-          <Burger size="sm" opened={isMenuOpen} onClick={onMenuToggle} hiddenFrom={breakpoint} />
-          {logo}
-    </Group>
     <motion.div
         initial={{ width: 0, opacity: 0 }}
         whileInView={{ width: 'fit-content', opacity: 1 }}

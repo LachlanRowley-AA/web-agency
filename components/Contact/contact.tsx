@@ -115,7 +115,7 @@ export function AuthenticationForm({
     <div style={{ height: '65vh', backgroundColor: '#f4f4f4', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <Paper p="lg" shadow="xl" radius="md" style={{ backgroundColor: 'white', width: '100%', maxWidth: 600 }}>
         <JumboTitle order={2} fz="sm" ta="center" style={{ textWrap: 'balance' }} mb="sm">
-          Contact Us Now
+          Enquire Now
         </JumboTitle>
         <JumboTitle order={2} fz="xxs" ta="center" style={{ textWrap: 'balance' }} mb="sm">
           And we'll be in touch shortly

@@ -35,7 +35,7 @@ type Hero03Props = ContainerProps & {
 
 export const Hero03 = ({
   badge = 'Partnering with Marketing Agencies',
-  description = 'Our team...',
+  description = '/proposition pitch/...',
   avatarItems = AVATAR_ITEMS_DEMO,
   ...containerProps
 }: Hero03Props) => (

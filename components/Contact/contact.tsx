@@ -80,7 +80,7 @@ export function AuthenticationForm({
       hasError = true;
     }
 
-    if (!validator.company.trim()) {
+    if (!form.values.company.trim()) {
       form.setFieldError('company', 'Company is required');
       hasError = true;
     }

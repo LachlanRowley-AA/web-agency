@@ -21,8 +21,10 @@
   },
   "dependencies": {
     "@mantine/core": "7.17.1",
+    "@mantine/form": "^7.17.1",
     "@mantine/hooks": "7.17.1",
     "@next/bundle-analyzer": "^15.1.5",
+    "@supabase/supabase-js": "^2.49.1",
     "@tabler/icons-react": "^3.31.0",
     "@types/react-motion": "^0.0.40",
     "motion": "^12.5.0",
@@ -30,8 +32,10 @@
     "nxt": "^0.0.0",
     "react": "^19.0.0",
     "react-dom": "19.0.0",
+    "supabase": "^2.19.6",
     "tabler": "^1.0.0",
-    "tabler-icons-react": "^1.56.0"
+    "tabler-icons-react": "^1.56.0",
+    "validator": "^13.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

@@ -10,13 +10,14 @@ import {
     Group,
     MantineBreakpoint,
     MantineRadius,
-    Text
+    Text,
 } from '@mantine/core';
 
 import { IconArrowRight } from '@tabler/icons-react';
 import { motion } from 'motion/react';
 import NextLink from 'next/link';
-import classes from './header-01.module.css'
+import classes from './header-01.module.css';
+import Image from 'next/image';
 
 export type HeaderLink = {
     label: string;
@@ -59,9 +60,12 @@ export const Header01 = ({
     style,
     breakpoint = 'xs',
     logo = (
-        <Text fw="bold" fz={24} mx="xs">
-            Titanium
-        </Text>
+        <Image 
+            src="/Asset Alley Logo_ColourScreenUse.svg"
+            alt="Asset Alley Logo"
+            width={150} // Adjust size accordingly
+            height={50}
+        />
     ),
     callToActionTitle = 'Join Now',
     callToActionUrl = '#',
@@ -69,7 +73,7 @@ export const Header01 = ({
     onMenuToggle,
     isMenuOpen,
     h = 60,
-    radius = 30,
+    radius = 10,
     ...containerProps
   }: Header01Props) => (
     <Container

@@ -35,14 +35,12 @@ type Hero03Props = ContainerProps & {
 
 export const Hero03 = ({
   badge = 'Partnering with Marketing Agencies',
-  description = 'Access cutting-edge developer tools and APIs. Build, deploy, and scale applications with enterprise-grade reliability.',
-  rating = 5,
-  ratingLabel = 'Trusted by 100k+ developers',
+  description = 'Our team...',
   avatarItems = AVATAR_ITEMS_DEMO,
   ...containerProps
 }: Hero03Props) => (
-  <Container pos="relative" h="100vh" mah={950} style={{ overflow: 'hidden' }} fluid>
-    <Container component="section" h="100vh" mah={950} mx="auto" size="xl" {...containerProps}>
+  <Container pos="relative" h="50vh" mah={850} style={{ overflow: 'hidden' }} fluid>
+    <Container component="section" h="60vh" mah={850} mx="auto" size="xl" {...containerProps}>
       <Image
         component={NextImage}
         pos="absolute"
@@ -79,10 +77,10 @@ export const Hero03 = ({
       />
       <Flex h="100%" align="center" pos="relative" justify="center">
         <Stack
-          pt={{ base: 'xl', sm: 0 }}
+          pt={{ base: 'md', sm: 0 }}
           maw="var(--mantine-breakpoint-md)"
           align="center"
-          gap="lg"
+          gap="md"
           style={{ zIndex: 1 }}
         >
           {badge && (
@@ -94,10 +92,10 @@ export const Hero03 = ({
             >
               <Badge
                 variant="default"
-                p="md"
+                p="sm"
                 bg="var(--mantine-color-body)"
-                size="xl"
-                mb="lg"
+                size="lg"
+                mb="md"
                 style={{ textTransform: 'none' }}
               >
                 {badge}
@@ -105,15 +103,13 @@ export const Hero03 = ({
             </motion.div>
           )}
           <motion.div
-            initial={{ opacity: 0.0, y: 40 }}
+            initial={{ opacity: 0.0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeInOut' }}
             viewport={{ once: true }}
           >
             <JumboTitle ta="center" order={1} fz="lg" style={{ textWrap: 'balance' }}>
-            Helping
-              <Text inherit c='#01E194'>YOUR</Text>
-             customers finance their new website
+              Help <span style={{ color: '#01E194' }}>YOUR</span> customers finance their new website
             </JumboTitle>
           </motion.div>
           <motion.div
@@ -125,7 +121,7 @@ export const Hero03 = ({
             <Text
               ta="center"
               maw="var(--mantine-breakpoint-xs)"
-              fz="xl"
+              fz="lg"
               style={{ textWrap: 'balance' }}
             >
               {description}
@@ -137,7 +133,7 @@ export const Hero03 = ({
             transition={{ duration: 0.8, delay: 0.6, ease: 'easeInOut' }}
             viewport={{ once: true }}
           >
-            <Stack align="center" mt="md">
+            <Stack align="center" mt="sm">
               <AvatarGroup>
                 {avatarItems.map((avatarItem, index) => (
                   <Avatar key={index} src={avatarItem.src} className={classes.avatar} />
@@ -151,5 +147,4 @@ export const Hero03 = ({
   </Container>
 );
 
-const AVATAR_ITEMS_DEMO: ImageItem[] = [
-];
+const AVATAR_ITEMS_DEMO: ImageItem[] = [];

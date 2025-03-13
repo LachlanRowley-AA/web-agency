@@ -1,23 +1,21 @@
-import { Anchor, Text, Title } from '@mantine/core';
+import { Anchor, Text, Flex, Container } from '@mantine/core';
+import Image from 'next/image';
 import classes from './Welcome.module.css';
 
 export function Welcome() {
   return (
-    <>
-      <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
-        <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
-        </Text>
-      </Title>
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Next.js project includes a minimal setup for server side rendering, if you want
-        to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/next/" size="lg">
-          this guide
+    <Container fluid p="md" style={{ backgroundColor: '#f8f9fa', height: 60 }}>
+      <Flex justify="space-between" align="center" h="100%">
+        <Image 
+          src="/Asset Alley Logo_ColourScreenUse.svg" 
+          alt="Asset Alley Logo" 
+          width={120} 
+          height={40} 
+        />
+        <Anchor href="https://mantine.dev/guides/next/" size="lg" color="blue">
+          Learn More
         </Anchor>
-        . To get started edit page.tsx file.
-      </Text>
-    </>
+      </Flex>
+    </Container>
   );
 }

@@ -30,15 +30,15 @@ const TESTIMONIALS: Testimonial[] = [
 
     name: "Jimmy O'Rourke",
     imageUrl: '',
-    company: 'COMPANY',
+    company: 'Worksite Insight',
     alt: "Jimmy O'Rourke",
   },
   {
     quote:`
-    Just wanted to say a huge thank you Asset Alley team for your help in securing me the funds I needed to grow my business. You answered all my questions and I was very happy with the quick and transparent process. Look forward to working together in the future!`,
+    Just wanted to say a huge thank you Asset Alley team for your help I needed to grow my business. You answered all my questions and I was very happy with the quick and transparent process. Look forward to working together in the future!`,
     name:'George Ektoros',
     imageUrl: '',
-    company: 'COMPANY',
+    company: 'GPS Vehicle Inspections',
     alt: 'George Ektoros'
 
   }
@@ -85,7 +85,7 @@ export const Testimonial01 = () => (
     py={{
       base: 'calc(var(--mantine-spacing-lg) * 4)',
       xs: 'calc(var(--mantine-spacing-lg) * 5)',
-      lg: 'calc(var(--mantine-spacing-lg) * 6)',
+      lg: 'calc(var(--mantine-spacing-lg) * 4)',
     }}
     fluid
   >

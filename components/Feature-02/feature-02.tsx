@@ -27,18 +27,18 @@ const FEATURES: Feature[] = [
   {
     icon: <IconRocket />,
     title: 'Get Paid Sooner',
-    description: 'Pre-optimized for performance and SEO.',
+    description: ' Receive full payment upfront while your customer repays over time, improving your cash flow and reducing financial risk',
   },
   {
     icon: <IconComponents />,
     title: 'Scrap your payment plan',
-    description: 'Highly customizable to fit your brand.',
+    description: 'No need to manage complicated in-house payment plans',
   },
   {
     icon: <IconDevices />,
     title: 'Close more sales',
     description:
-      'Optimized for seamless user experience across various devices, including phones and tablets.',
+      'Overcome budget objections making it easier for customers to say "yes" to your services',
   },
 ] as const;
 
@@ -46,18 +46,18 @@ const Consumer_FEATURES: Feature[] = [
     {
         icon: <IconRocket />,
         title: 'No Need to Outlay Total Amount Upfront',
-        description: 'Pre-optimized for performance and SEO.',
+        description: 'Your customers can get their new website now without needing to pay the full cost immediately.',
       },
       {
         icon: <IconComponents />,
         title: 'Repayments over 5 years',
-        description: 'Highly customizable to fit your brand.',
+        description: 'Flexible financing spreads the cost over five years, making high-quality web solutions more affordable.',
       },
       {
         icon: <IconDevices />,
         title: 'No additional security required',
         description:
-          'Optimized for seamless user experience across various devices, including phones and tablets.',
+          ' Customers can access financing without the need for collateral, simplifying the process and reducing barriers to approval.',
       },
 ] as const;
 
@@ -134,7 +134,7 @@ export const Feature02 = ({
     transition={{ duration: 0.8, ease: 'easeInOut' }}
     viewport={{ once: true }}
     >
-      <JumboTitle order={2} fz="md" style={{ textWrap: 'balance', color: 'var(--mantine-color-white)' }}>
+      <JumboTitle order={2} fz="md" style={{ textWrap: 'balance', color: '#01E194' }}>
         {title}
       </JumboTitle>
       </motion.div>
@@ -162,7 +162,7 @@ export const Feature02 = ({
     transition={{ duration: 0.8, ease: 'easeInOut' }}
     viewport={{ once: true }}
     >
-      <JumboTitle order={2} fz="md" style={{ textWrap: 'balance', color: 'var(--mantine-color-white)' }}>
+      <JumboTitle mt='xl' order={2} fz="md" style={{ textWrap: 'balance', color: '#01E194' }}>
         {title2}
       </JumboTitle>
       </motion.div>

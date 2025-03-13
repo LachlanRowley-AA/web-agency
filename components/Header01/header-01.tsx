@@ -67,7 +67,7 @@ export const Header01 = ({
             height={50}
         />
     ),
-    callToActionTitle = 'Join Now',
+    callToActionTitle = 'Enquire Now',
     callToActionUrl = '#',
     links = HEADER_LINKS,
     onMenuToggle,

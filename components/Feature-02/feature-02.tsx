@@ -113,7 +113,7 @@ type Feature02Props = {
 
 export const Feature02 = ({
   title = 'Benefits to You',
-  title2 = 'Benefits for your customer',
+  title2 = 'Benefits for your customers',
   features = FEATURES,
   cFeatures = Consumer_FEATURES,
   iconSize = 20,

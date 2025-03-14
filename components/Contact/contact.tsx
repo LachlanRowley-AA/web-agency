@@ -114,7 +114,7 @@ export function AuthenticationForm({
   }
 
   return (
-    <div style={{ height: '65vh', backgroundColor: '#f4f4f4', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <div style={{ minHeight: '65vh', backgroundColor: '#f4f4f4', display: 'flex', justifyContent: 'center', alignItems: 'center', padding:'20px' }}>
       <Paper p="lg" shadow="xl" radius="md" style={{ backgroundColor: 'white', width: '100%', maxWidth: 800 }}>
         <Flex>
           {/* Left Side: Form */}
@@ -156,6 +156,7 @@ export function AuthenticationForm({
             <div style={{ flex: 1, height: '80%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <NextImage src='/louie.jpg' width={200} height={200} alt='Louie Dib' style={{ objectFit: 'cover', borderRadius: '100px' }} />
             </div>
+            <Text style={{ textAlign: 'center', marginTop: '10px' }}>Louie Dib</Text>
             
             {/* BBA Avatar */}
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>

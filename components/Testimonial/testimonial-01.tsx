@@ -91,9 +91,6 @@ export const Testimonial01 = () => (
   >
     <Container size="md">
       <Stack gap="xs" align="center">
-        <Badge className={classes.badge} size="xl" mb="lg">
-          Testimonials
-        </Badge>
         <JumboTitle order={2} fz="md" ta="center" style={{ textWrap: 'balance' }} mb="sm">
           What our customers are saying
         </JumboTitle>

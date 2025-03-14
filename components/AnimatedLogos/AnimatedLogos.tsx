@@ -60,7 +60,7 @@ export type Logos03Props = ContainerProps & {
 };
 
 export const Logos03 = ({
-  title = 'Access Loans from over {NUMBER} Lenders ',
+  title = 'We\'ve Already Partnered With',
   items = ITEMS,
   gridProps,
   titleProps,
@@ -78,7 +78,7 @@ export const Logos03 = ({
   >
 
     <JumboTitle order={2} fz="xs" ta="center" style={{ textWrap: 'balance' }} mb="sm">
-    Helping finance SOME CLIENTS
+    Trusted By
     </JumboTitle>
     <Marquee items={items} gap="calc(var(--mantine-spacing-lg) * 2)" duration={15} />
   </Container>

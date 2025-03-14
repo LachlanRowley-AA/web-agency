@@ -10,12 +10,14 @@ import {
   Paper,
   Text,
   TextInput,
-  Flex
+  Flex,
+  Avatar
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { JumboTitle } from '../Jumbo-Title/jumbo-title';
 import { createClient } from '@supabase/supabase-js';
 import validator from 'validator';
+import NextImage from 'next/image';
 
 const supabase = createClient("https://hfsysehrdshrbtmjsgcx.supabase.co", "YOUR_SUPABASE_KEY");
 
@@ -113,39 +115,54 @@ export function AuthenticationForm({
 
   return (
     <div style={{ height: '65vh', backgroundColor: '#f4f4f4', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <Paper p="lg" shadow="xl" radius="md" style={{ backgroundColor: 'white', width: '100%', maxWidth: 600 }}>
-        <JumboTitle order={2} fz="sm" ta="center" style={{ textWrap: 'balance' }} mb="sm">
-          Enquire Now
-        </JumboTitle>
-        <JumboTitle order={2} fz="xxs" ta="center" style={{ textWrap: 'balance' }} mb="sm">
-          And we'll be in touch shortly
-        </JumboTitle>
-        {submitted ? (
-          <Flex justify="center" align="center" direction="column" py="xl">
-            <IconCircleCheckFilled size={48} color="green" />
-            <Text mt="md" size="lg" c="green">
-              Thank you. We'll be in touch soon!
-            </Text>
-          </Flex>
-        ) : (
-          <form onSubmit={form.onSubmit(handleSubmit)}>
-            <LoadingOverlay visible={loading} />
-            <Group grow>
-              <TextInput data-autofocus required placeholder="Your first name" label="First name" {...form.getInputProps('firstName')} />
-              <TextInput required placeholder="Your last name" label="Last name" {...form.getInputProps('lastName')} />
-            </Group>
-            <TextInput mt="md" required placeholder="Your company" label="Company" {...form.getInputProps('company')} />
-            <TextInput mt="md" required placeholder="Your phone Number" label="Phone" leftSection={<IconHash size={16} stroke={1.5} />} {...form.getInputProps('phone')} />
-            <TextInput mt="md" required placeholder="Your email" label="Email" leftSection={<IconAt size={16} stroke={1.5} />} {...form.getInputProps('email')} />
-            <Checkbox mt="xl" label="I agree to be contacted by a member of Asset Alley" {...form.getInputProps('contact', { type: 'checkbox' })} />
-            {error && <Text c="red" size="sm" mt="sm">{error}</Text>}
-            {!noSubmit && (
-              <Group justify="center" mt="xl">
-                <Button color="#01E194" type="submit">Submit</Button>
-              </Group>
+      <Paper p="lg" shadow="xl" radius="md" style={{ backgroundColor: 'white', width: '100%', maxWidth: 800 }}>
+        <Flex>
+          {/* Left Side: Form */}
+          <div style={{ flex: 1, paddingRight: '20px' }}>
+            <JumboTitle order={2} fz="sm" ta="center" style={{ textWrap: 'balance' }} mb="sm">
+              Book a Call With Our Director
+            </JumboTitle>
+            {submitted ? (
+              <Flex justify="center" align="center" direction="column" py="xl">
+                <IconCircleCheckFilled size={48} color="green" />
+                <Text mt="md" size="lg" c="green">
+                  Thank you. We'll be in touch soon!
+                </Text>
+              </Flex>
+            ) : (
+              <form onSubmit={form.onSubmit(handleSubmit)}>
+                <LoadingOverlay visible={loading} />
+                <Group grow>
+                  <TextInput data-autofocus required placeholder="Your first name" label="First name" {...form.getInputProps('firstName')} />
+                  <TextInput required placeholder="Your last name" label="Last name" {...form.getInputProps('lastName')} />
+                </Group>
+                <TextInput mt="md" required placeholder="Your company" label="Company" {...form.getInputProps('company')} />
+                <TextInput mt="md" required placeholder="Your phone Number" label="Phone" leftSection={<IconHash size={16} stroke={1.5} />} {...form.getInputProps('phone')} />
+                <TextInput mt="md" required placeholder="Your email" label="Email" leftSection={<IconAt size={16} stroke={1.5} />} {...form.getInputProps('email')} />
+                <Checkbox mt="xl" label="I agree to be contacted by a member of Asset Alley" {...form.getInputProps('contact', { type: 'checkbox' })} />
+                {error && <Text c="red" size="sm" mt="sm">{error}</Text>}
+                {!noSubmit && (
+                  <Group justify="center" mt="xl">
+                    <Button color="#01E194" type="submit">Submit</Button>
+                  </Group>
+                )}
+              </form>
             )}
-          </form>
-        )}
+          </div>
+
+          {/* Right Side: Images */}
+          <div style={{ flex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            {/* Louie Image (80% height) */}
+            <div style={{ flex: 1, height: '80%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <NextImage src='/louie.jpg' width={200} height={200} alt='Louie Dib' style={{ objectFit: 'cover', borderRadius: '100px' }} />
+            </div>
+            
+            {/* BBA Avatar */}
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                <NextImage src='/bba.png' width={100} height={100} alt='BBA Logo'/>
+            </div>
+          </div>
+        </Flex>
       </Paper>
     </div>
   );

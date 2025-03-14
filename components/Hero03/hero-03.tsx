@@ -37,7 +37,7 @@ const calculateWeeklyRepayment = (loanAmount) => {
 
 export const Hero03 = ({
   badge = 'Partnering with Marketing Agencies',
-  description = '/proposition pitch/...',
+  description = 'AssetAlley will help your clients access 5 year loans to pay for YOUR services so you get paid NOW',
   ...containerProps
 }) => {
   const [loanAmount, setLoanAmount] = useState(20000);
@@ -108,7 +108,7 @@ export const Hero03 = ({
 
             </motion.div>
             <motion.div initial={{ opacity: 0.0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4, ease: 'easeInOut' }} viewport={{ once: true }}>
-              <Text ta="center" maw="var(--mantine-breakpoint-xs)" fz="lg" style={{ textWrap: 'balance' }}>
+              <Text ta="center" maw="var(--mantine-breakpoint-xs)" fz="xl" style={{ textWrap: 'balance' }}>
                 {description}
               </Text>
               

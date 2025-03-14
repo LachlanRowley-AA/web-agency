@@ -1,8 +1,9 @@
-import { type MantineFontSize, Title, type TitleProps } from '@mantine/core';
+import { type MantineFontSize, Title, TextInput, type TitleProps } from '@mantine/core';
 import clsx from 'clsx';
 import classes from './jumbo-title.module.css';
 
 export type JumboTitleOrder = 1 | 2 | 3 | 4 | 5;
+
 
 const FONT_WEIGHT_MAP: Record<MantineFontSize, number> = {
   xl: 800,

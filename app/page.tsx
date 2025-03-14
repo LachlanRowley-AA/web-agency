@@ -5,6 +5,7 @@ import { Testimonial01 } from '@/components/Testimonial/testimonial-01';
 import { Header01 } from '@/components/Header01/header-01';
 import { Feature02 } from '@/components/Feature-02/feature-02';
 import { AuthenticationForm } from '@/components/Contact/contact';
+import { Logos03 } from '@/components/AnimatedLogos/AnimatedLogos';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Hero03/>
       <Feature02/>
       <Testimonial01/>
+      <Logos03/>
       <AuthenticationForm/>
     </>
   );

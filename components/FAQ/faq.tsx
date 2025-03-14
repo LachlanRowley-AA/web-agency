@@ -56,9 +56,6 @@ type FeatureProps = {
   /** Props to be passed to the container component. */
   containerProps?: ContainerProps;
 
-  /** The items to be displayed in the feature section. */
-  items: Item[];
-
   /** The border radius of the container. */
   radius?: MantineRadius;
 };

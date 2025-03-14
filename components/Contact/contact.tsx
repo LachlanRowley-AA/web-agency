@@ -139,7 +139,10 @@ export function AuthenticationForm({
                 <TextInput mt="md" required placeholder="Your company" label="Company" {...form.getInputProps('company')} />
                 <TextInput mt="md" required placeholder="Your phone Number" label="Phone" leftSection={<IconHash size={16} stroke={1.5} />} {...form.getInputProps('phone')} />
                 <TextInput mt="md" required placeholder="Your email" label="Email" leftSection={<IconAt size={16} stroke={1.5} />} {...form.getInputProps('email')} />
+                <Checkbox mt="xl" label="Are your website and app price points over $15,000" {...form.getInputProps('contact', { type: 'checkbox' })} />
+                <Checkbox mt="xl" label="Are you currently offering payment plans" {...form.getInputProps('contact', { type: 'checkbox' })} />
                 <Checkbox mt="xl" label="I agree to be contacted by a member of Asset Alley" {...form.getInputProps('contact', { type: 'checkbox' })} />
+
                 {error && <Text c="red" size="sm" mt="sm">{error}</Text>}
                 {!noSubmit && (
                   <Group justify="center" mt="xl">

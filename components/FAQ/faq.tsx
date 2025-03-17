@@ -173,6 +173,7 @@ export const FAQ = ({
                     hiddenFrom={collapseBreakpoint}
                     alt={mainImage.alt}
                     src={mainImage.src}
+                    className='hide-mobile'
                   />
                 </Accordion.Panel>
               </Accordion.Item>

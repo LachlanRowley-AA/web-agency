@@ -6,3 +6,7 @@
     font-family: 'Cera';
     src: local('Cera'), url("./Cera Pro Regular.ttf");
   } */
+
+.hide-mobile {
+  display: none;
+}

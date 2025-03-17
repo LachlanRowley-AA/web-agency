@@ -16,6 +16,7 @@ import {
 import { IconChevronUp } from '@tabler/icons-react';
 import { ReactNode, useState } from 'react';
 import classes from './faq.module.css';
+import { JumboTitle } from '../Jumbo-Title/jumbo-title';
 
 type Item = {
   /** The value of the accordion item. */
@@ -76,6 +77,11 @@ const faqItems = [
         value: 'item3',
         title: 'What happens if a client stops paying',
         description: 'Nothing happens to you; you keep your money'
+    },
+    {
+        value: 'item4',
+        title: 'Is there security over the IP',
+        description: ''
     }
 ]
 
@@ -98,15 +104,14 @@ export const FAQ = ({
   const maxImageHeight = '';
   return (
     <Container
+      bg="var(--mantine-color-black)"
+      fluid
       className={classes.container}
       size="lg"
       py="lg"
       styles={{
         root: {
           overflow: 'hidden',
-          borderRadius: radius
-            ? `var(--mantine-radius-${radius})`
-            : 'var(--mantine-radius-default)',
         },
       }}
       {...containerProps}
@@ -136,7 +141,7 @@ export const FAQ = ({
             }}
             styles={{
               control: {
-                height: 60,
+                height: 120,
               },
             }}
             {...accordionProps}
@@ -144,7 +149,7 @@ export const FAQ = ({
             {items.map((item) => (
               <Accordion.Item key={item.value} value={item.value}>
                 <Accordion.Control>
-                  <Title c="var(--mantine-color-text)" order={4} fz="xl">
+                  <Title c="var(--mantine-color-white)" order={1} fz="xxl">
                     {item.title}
                   </Title>
                 </Accordion.Control>
@@ -155,6 +160,7 @@ export const FAQ = ({
                       sm: 'md',
                     }}
                     {...item.descriptionProps}
+                    c="var(--mantine-color-white)"
                   >
                     {item.description}
                   </Text>

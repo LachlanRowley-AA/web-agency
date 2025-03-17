@@ -36,7 +36,6 @@ const calculateWeeklyRepayment = (loanAmount : number) => {
 };
 
 export const Hero03 = ({
-  badge = 'Partnering with Marketing Agencies',
   description = 'AssetAlley will help your clients access 5 year loans to pay for YOUR services so you get paid NOW',
   ...containerProps
 }) => {
@@ -45,7 +44,7 @@ export const Hero03 = ({
 
   return (
     <Container pos="relative" h="50vh" mah={850} style={{ overflow: 'clip' }} fluid>
-      <Container component="section" h="60vh" mah={850} mx="auto" size="xl" {...containerProps}>
+      <Container component="section" h="50vh" mah={850} mx="auto" size="xl" {...containerProps}>
         <Image
           component={NextImage}
           pos="absolute"

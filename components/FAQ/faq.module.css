@@ -1,3 +1,8 @@
 .container {
     background-color: light-dark(var(--mantine-color-white), var(--mantine-color-black));
   }
+
+  /* @font-face {
+    font-family: 'Cera';
+    src: local('Cera'), url("./Cera Pro Regular.ttf");
+  } */

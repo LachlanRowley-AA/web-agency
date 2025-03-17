@@ -1,0 +1,9 @@
+.cell {
+    @media (max-width: var(--mantine-breakpoint-lg)) {
+      aspect-ratio: 1 / 1;
+    }
+  }
+  
+  .tinted-cell {
+    background-color: light-dark(var(--mantine-color-light), var(--mantine-color-white));
+  }

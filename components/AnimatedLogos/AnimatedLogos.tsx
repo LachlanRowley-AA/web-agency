@@ -12,44 +12,28 @@ import {
 } from '@tabler/icons-react';
 import { ReactNode } from 'react';
 import { JumboTitle } from '../Jumbo-Title/jumbo-title';
+import NextImage from 'next/image'
+
+import dsigns from '../../public/dsigns-logo.webp';
+import creades from '../../public/creades-logo.webp';
+import endspace from '../../public/endspace.png';
 
 const ITEMS = [
-  <Group key="mantine" wrap="nowrap">
-    <IconBrandMantine size={40} />
-    <Text fz={32} fw={600}>
-      Mantine
-    </Text>
+  <Group key="branding" wrap="nowrap">
+    <NextImage src='the-branding-lab-logo.svg' height={100} width={300} alt='the-branding-lab' />
   </Group>,
-  <Group key="nextjs" wrap="nowrap">
-    <IconBrandNextjs size={40} />
-    <Text fz={32} fw={600}>
-      Next.js
-    </Text>
+  <Group key="born" wrap="nowrap">
+    <NextImage src='born-creators.svg' height={80} width={150} alt='born' />
+    </Group>,
+  <Group key="dsigns" wrap="nowrap">
+    <NextImage src={dsigns} height={50} width={150} alt='dsigns' />
   </Group>,
-  <Group key="react" wrap="nowrap">
-    <IconBrandReact size={40} />
-    <Text fz={32} fw={600}>
-      React
-    </Text>
-  </Group>,
-  <Group key="medium" wrap="nowrap">
-    <IconBrandMedium size={40} />
-    <Text fz={32} fw={600}>
-      Medium
-    </Text>
-  </Group>,
-  <Group key="vercel" wrap="nowrap">
-    <IconBrandVercelFilled size={40} />
-    <Text fz={32} fw={600}>
-      Vercel
-    </Text>
-  </Group>,
-  <Group key="github" wrap="nowrap">
-    <IconBrandGithub size={40} />
-    <Text fz={32} fw={600}>
-      Github
-    </Text>
-  </Group>,
+  <Group key="creades" wrap="nowrap">
+    <NextImage src={creades} height={50} width={150} alt='creades' />
+    </Group>,
+  <Group key="endspace" wrap="nowrap">
+    <NextImage src={endspace} height={40} width={150} alt='endspace' />
+    </Group>,
 ];
 
 export type Logos03Props = ContainerProps & {
@@ -67,17 +51,17 @@ export const Logos03 = ({
   ...containerProps
 }: Logos03Props) => (
   <Container
-    bg="var(--mantine-color-body)"
+    bg="var(--mantine-color-black)"
     py={{
       base: 'calc(var(--mantine-spacing-lg) * 1)',
-      xs: 'calc(var(--mantine-spacing-lg) * 2)',
-      lg: 'calc(var(--mantine-spacing-lg) * 3)',
+      xs: 'calc(var(--mantine-spacing-lg) * 1)',
+      lg: 'calc(var(--mantine-spacing-lg) * 1)',
     }}
-    size="xl"
+    fluid
     {...containerProps}
   >
 
-    <JumboTitle order={2} fz="xs" ta="center" style={{ textWrap: 'balance' }} mb="sm">
+    <JumboTitle order={2} fz="xs" ta="center" style={{ textWrap: 'balance' }} mb="sm" c='var(--mantine-color-white)'>
     Trusted By
     </JumboTitle>
     <Marquee items={items} gap="calc(var(--mantine-spacing-lg) * 2)" duration={15} />

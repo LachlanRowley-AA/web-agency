@@ -109,19 +109,10 @@ export function AuthenticationForm({
     <div style={{ minHeight: '65vh', backgroundColor: '#f4f4f4', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
       <Paper p="lg" shadow="xl" radius="md" style={{ backgroundColor: 'white', width: '100%', maxWidth: 1200 }}>
         <Flex>
-          <div style={{ flex: 1, paddingRight: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-            <JumboTitle order={3} fz="xs" ta="center" style={{ textWrap: 'balance' }} mb="sm">
+          <div style={{ flex: 1, paddingRight: '20px', display: 'flex', flexDirection: 'column' }}>
+            <JumboTitle order={3} fz="xs" ta="center" style={{ textWrap: 'balance' }} mb="lg">
               Book a Call With Our Director
             </JumboTitle>
-            {submitted ? (
-              <Flex justify="center" align="center" direction="column" py="xl">
-                <IconCircleCheckFilled size={48} color="green" />
-                <Text mt="md" size="lg" c="green">
-                  Thank you. We'll be in touch soon!
-                </Text>
-              </Flex>
-            ) : (
-              <form onSubmit={form.onSubmit(handleSubmit)}>
                 <LoadingOverlay visible={loading} />
                 <div style={{ minHeight: '100px' }}>
                   <Checkbox.Group value={selectedCheckboxes} onChange={handleCheckboxChange}>
@@ -139,15 +130,10 @@ export function AuthenticationForm({
                     </Stack>
                   </Checkbox.Group>
                 </div>
-                <div style={{ marginTop: '30px', flex: 1, height: '80%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <NextImage src='/louie.jpg' width={200} height={200} alt='Louie Dib' style={{ objectFit: 'cover', borderRadius: '100px' }} />
-                </div>
-                <Text style={{ textAlign: 'center', marginTop: '10px' }}>Louie Dib</Text>
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-                  <NextImage src='/bba.png' width={100} height={100} alt='BBA Logo' />
-                </div>
-              </form>
-            )}
+                <div style={{ marginTop: '10px', alignItems: 'center', gap: '10px' }}>
+                <NextImage src='/louie.jpg' width={200} height={200} alt='Louie Dib' style={{ objectFit: 'cover', borderRadius: '100px' }} />
+                <NextImage src='/bba.png' width={100} height={100} alt='BBA Logo' />
+              </div>
           </div>
           <div style={{ flex: 1.5, minWidth: '50%', visibility: selectedCheckboxes.length === checkboxQs.length ? 'visible' : 'hidden', height: selectedCheckboxes.length === checkboxQs.length ? 'auto' : '0' }}>
             {selectedCheckboxes.length === checkboxQs.length && (

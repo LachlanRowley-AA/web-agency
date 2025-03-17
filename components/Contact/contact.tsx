@@ -45,7 +45,7 @@ export function AuthenticationForm({
     form.setFieldValue('ref', params.get('ref'));
   }, []);
 
-  const handleCheckboxChange = (value) => {
+  const handleCheckboxChange = (value : any) => {
     setSelectedCheckboxes(value);
   };
 

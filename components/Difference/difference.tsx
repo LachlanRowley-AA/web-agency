@@ -17,51 +17,6 @@ type Testimonial = {
 const TESTIMONIALS: Testimonial[] = [
 ];
 
-const TestimonialCell = ({
-  quote,
-  name,
-  imageUrl,
-  handle,
-  alt,
-  variant = 'default',
-  ...paperProps
-}: PaperProps &
-  Testimonial & {
-    variant?: 'default' | 'light';
-  }) => (
-  <Paper
-    component="figure"
-    radius={0}
-    mx={0}
-    // w={{
-    //   base: '100%',
-    //   lg: '33.333%',
-    // }}
-    my={0}
-    className={clsx(classes.cell, {
-      [classes['tinted-cell']]: variant === 'light',
-    })}
-    {...paperProps}
-  >
-    <Flex direction="column" justify="space-between" h="100%">
-      <Text fz="xl" component="blockquote">
-        "{quote}"
-      </Text>
-      <Group mt="xl" align="start">
-        <Avatar radius="xl" size="lg">
-          <NextImage src={imageUrl} alt={alt} fill />
-        </Avatar>
-        <Box>
-          <Text fz="lg" fw={500}>
-            {name}
-          </Text>
-          <Text c="dimmed">{handle}</Text>
-        </Box>
-      </Group>
-    </Flex>
-  </Paper>
-);
-
 const mainImage = {
     src: "stock.jpg",
     alt: 'stock photo'
@@ -116,21 +71,5 @@ export const Difference = () => (
         </Grid.Col>
       </Grid>
     </Container>
-    <Flex
-      mt={{
-        base: 'calc(var(--mantine-spacing-xl) * 3)',
-        lg: 'calc(var(--mantine-spacing-xl) * 5)',
-      }}
-      wrap="wrap"
-      justify="center"
-    >
-      {TESTIMONIALS.map((testimonial, index) => (
-        <TestimonialCell
-          key={testimonial.name}
-          {...testimonial}
-          variant={index % 2 === 0 ? 'light' : 'default'}
-        />
-      ))}
-    </Flex>
   </Container>
 );

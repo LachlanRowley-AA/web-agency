@@ -44,6 +44,41 @@ const TESTIMONIALS: Testimonial[] = [
   }
 ];
 
+const TestimonialCell = ({
+  quote,
+  name,
+  imageUrl,
+  company,
+  alt,
+  ...paperProps
+}: PaperProps & Testimonial) => (
+  <Paper
+    component="figure"
+    radius="xl"
+    p="xl"
+    mx={0}
+    w={320}
+    my={0}
+    className={classes.cell}
+    {...paperProps}
+  >
+    <Flex direction="column" justify="space-between" h="100%">
+      <Text component="blockquote">"{quote}"</Text>
+      <Group mt="xl" align="start">
+        <Avatar radius="xl" size="lg">
+          <NextImage src={imageUrl} alt={alt} fill />
+        </Avatar>
+        <Box>
+          <Text fz="lg" fw={500}>
+            {name}
+          </Text>
+          <Text c="dimmed">{company}</Text>
+        </Box>
+      </Group>
+    </Flex>
+  </Paper>
+);
+
 export const Testimonial01 = () => (
   <Container
     bg="var(--mantine-color-body)"
@@ -63,6 +98,18 @@ export const Testimonial01 = () => (
           Real stories from the people who know us best
         </Text> */}
       </Stack>
+    </Container>
+    <Container size="xl">
+      <Flex
+        mt="calc(var(--mantine-spacing-lg) * 3)"
+        gap="calc(var(--mantine-spacing-sm) * 3)"
+        wrap="wrap"
+        justify="center"
+      >
+        {TESTIMONIALS.map((testimonial) => (
+          <TestimonialCell key={testimonial.name} {...testimonial} />
+        ))}
+      </Flex>
     </Container>
   </Container>
 );

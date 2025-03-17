@@ -158,7 +158,10 @@ export const FAQ = ({
             {faqItems.map((item) => (
               <Accordion.Item key={item.value} value={item.value}>
                 <Accordion.Control>
-                  <Title c="var(--mantine-color-white)" order={1} fz="xxl">
+                  <Title c="var(--mantine-color-white)" order={1} visibleFrom='md'>
+                    {item.title}
+                  </Title>
+                  <Title c="var(--mantine-color-white)" order={3} hiddenFrom='md'>
                     {item.title}
                   </Title>
                 </Accordion.Control>

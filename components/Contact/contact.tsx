@@ -15,13 +15,9 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { JumboTitle } from '../Jumbo-Title/jumbo-title';
-import { createClient } from '@supabase/supabase-js';
-import validator from 'validator';
 import NextImage from 'next/image';
 import { InlineWidget } from 'react-calendly';
 import classes from './contact.module.css';
-
-const supabase = createClient("https://hfsysehrdshrbtmjsgcx.supabase.co", "YOUR_SUPABASE_KEY");
 
 const checkboxQs = [
   { name: 'Are your price points over $15,000' },
@@ -29,13 +25,8 @@ const checkboxQs = [
 ];
 
 export function AuthenticationForm({
-  noShadow,
-  noPadding,
-  noSubmit,
-  style,
 }) {
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
   
   const form = useForm({
@@ -56,53 +47,6 @@ export function AuthenticationForm({
 
   const handleCheckboxChange = (value) => {
     setSelectedCheckboxes(value);
-  };
-
-  const handleSubmit = async () => {
-    setLoading(true);
-    let hasError = false;
-
-    if (!form.values.firstName.trim()) {
-      form.setFieldError('firstName', 'First name is required');
-      hasError = true;
-    }
-
-    if (!form.values.lastName.trim()) {
-      form.setFieldError('lastName', 'Last name is required');
-      hasError = true;
-    }
-
-    if (!validator.isEmail(form.values.email)) {
-      form.setFieldError('email', 'Invalid email address');
-      hasError = true;
-    }
-
-    if (!form.values.company.trim()) {
-      form.setFieldError('company', 'Company is required');
-      hasError = true;
-    }
-
-    if (!validator.isMobilePhone(form.values.phone, 'en-AU')) {
-      form.setFieldError('phone', 'Invalid Australian phone number');
-      hasError = true;
-    }
-
-    if (hasError) {
-      setLoading(false);
-      return;
-    }
-
-    await supabase.from('enquiries').insert({
-      first_name: form.values.firstName,
-      last_name: form.values.lastName,
-      company: form.values.company,
-      phone: form.values.phone,
-      email: form.values.email,
-      referral: form.values.ref,
-    });
-
-    setLoading(false);
-    setSubmitted(true);
   };
 
   return (

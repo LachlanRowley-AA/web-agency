@@ -65,23 +65,28 @@ type FeatureProps = {
 const faqItems = [
     {
         value: 'item1',
-        title: 'What is the financing term',
-        description: '5 year term',
+        title: 'What is the financing term?',
+        description: '5 years with the option to payout or make lump sum contributions with no penalties',
     },
     {
         value: 'item2',
-        title: 'How fast do I get the money',
-        descritpion: 'Straight away'
+        title: 'How fast do I get the money?',
+        description: 'Depending on the client intent levels, the funds can be paid within 2-3 business days',
     },
     {
         value: 'item3',
-        title: 'What happens if a client stops paying',
-        description: 'Nothing happens to you; you keep your money'
+        title: 'How will I get paid?',
+        description: 'The financier will transfer funds to you directly'
     },
     {
         value: 'item4',
-        title: 'Is there security over the IP',
-        description: ''
+        title: 'What happens if a client stops paying?',
+        description: 'Nothing happens to you; you keep your money'
+    },
+    {
+        value: 'item5',
+        title: 'Is there security over the IP?',
+        description: 'There is no security over the ip'
     }
 ]
 
@@ -96,7 +101,6 @@ export const FAQ = ({
   accordionProps,
   collapseBreakpoint = 'md',
   containerProps,
-  radius = 'lg',
 
 }: FeatureProps) => {
   const [selectedValue, setSelectedValue] = useState<string>(faqItems[0].value);
@@ -135,7 +139,7 @@ export const FAQ = ({
             chevronSize={24}
             value={selectedValue}
             onChange={(value) => {
-              if (value === null) return;
+              if (value === null) {return};
               setSelectedValue(value);
             }}
             styles={{
@@ -156,7 +160,7 @@ export const FAQ = ({
                   <Text
                     fz={{
                       base: 'sm',
-                      sm: 'md',
+                      sm: 'xl',
                     }}
                     c="var(--mantine-color-white)"
                   >

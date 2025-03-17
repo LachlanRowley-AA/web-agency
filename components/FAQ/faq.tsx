@@ -99,7 +99,7 @@ const mainImage =
 
 export const FAQ = ({
   accordionProps,
-  collapseBreakpoint = 'md',
+  collapseBreakpoint = 'sm',
   containerProps,
 
 }: FeatureProps) => {
@@ -166,15 +166,6 @@ export const FAQ = ({
                   >
                     {item.description}
                   </Text>
-                  <Image
-                    my="xl"
-                    w="100%"
-                    h="auto"
-                    hiddenFrom={collapseBreakpoint}
-                    alt={mainImage.alt}
-                    src={mainImage.src}
-                    className='hide-mobile'
-                  />
                 </Accordion.Panel>
               </Accordion.Item>
             ))}

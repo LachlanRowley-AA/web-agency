@@ -86,7 +86,13 @@ const faqItems = [
     {
         value: 'item5',
         title: 'Is there security over the IP?',
-        description: 'There is no security over the ip'
+        description: 'There is no security over the IP'
+    },
+    {
+        value: 'item6',
+        title: 'Do we run a credit check on the customer?',
+        description: "The credit checks we run are considered soft checks which don't impact the customer's credit score. \n Once the funder is 100% set opn the deal, they will run their own credit check"
+        
     }
 ]
 
@@ -160,7 +166,7 @@ export const FAQ = ({
                   <Text
                     fz={{
                       base: 'sm',
-                      sm: 'xl',
+                      sm: 'md',
                     }}
                     c="var(--mantine-color-white)"
                   >

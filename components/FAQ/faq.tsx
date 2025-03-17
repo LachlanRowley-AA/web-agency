@@ -96,11 +96,10 @@ export const FAQ = ({
   accordionProps,
   collapseBreakpoint = 'md',
   containerProps,
-  items = faqItems,
   radius = 'lg',
 
 }: FeatureProps) => {
-  const [selectedValue, setSelectedValue] = useState<string>(items[0].value);
+  const [selectedValue, setSelectedValue] = useState<string>(faqItems[0].value);
   const maxImageHeight = '';
   return (
     <Container
@@ -146,7 +145,7 @@ export const FAQ = ({
             }}
             {...accordionProps}
           >
-            {items.map((item) => (
+            {faqItems.map((item) => (
               <Accordion.Item key={item.value} value={item.value}>
                 <Accordion.Control>
                   <Title c="var(--mantine-color-white)" order={1} fz="xxl">
@@ -159,7 +158,6 @@ export const FAQ = ({
                       base: 'sm',
                       sm: 'md',
                     }}
-                    {...item.descriptionProps}
                     c="var(--mantine-color-white)"
                   >
                     {item.description}
@@ -178,7 +176,7 @@ export const FAQ = ({
           </Accordion>
         </Flex>
         <Flex visibleFrom={collapseBreakpoint} maw="60%" align="center" h={maxImageHeight}>
-          {items.map((item) => (
+          {faqItems.map((item) => (
             <Flex
               key={item.value}
               visibleFrom={collapseBreakpoint}

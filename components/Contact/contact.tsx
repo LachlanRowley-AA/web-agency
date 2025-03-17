@@ -20,7 +20,7 @@ import { InlineWidget } from 'react-calendly';
 import classes from './contact.module.css';
 
 const checkboxQs = [
-  { name: 'Are your price points over $15,000' },
+  { name: 'Are your price points over $10,000' },
   { name: 'Do you offer your own payment plans' }
 ];
 
@@ -51,7 +51,7 @@ export function AuthenticationForm({
 
   return (
     <div style={{ minHeight: '65vh', backgroundColor: '#f4f4f4', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
-      <Paper p="lg" shadow="xl" radius="md" style={{ backgroundColor: 'white', width: '100%', maxWidth: 1200 }}>
+      <Paper p="lg" shadow="xl" radius="xl" style={{ backgroundColor: 'white', width: '100%', maxWidth: 1200 }}>
         <Flex>
           <div style={{ flex: 1, paddingRight: '20px', display: 'flex', flexDirection: 'column' }}>
             <JumboTitle order={3} fz="xs" ta="center" style={{ textWrap: 'balance' }} mb="lg">
@@ -81,7 +81,7 @@ export function AuthenticationForm({
           </div>
           <div style={{ flex: 1.5, minWidth: '50%', visibility: selectedCheckboxes.length === checkboxQs.length ? 'visible' : 'hidden', height: selectedCheckboxes.length === checkboxQs.length ? 'auto' : '0' }}>
             {selectedCheckboxes.length === checkboxQs.length && (
-              <InlineWidget url='https://calendly.com/lachlan-assetalley/30min' />
+              <InlineWidget url='https://calendly.com/louiedib/website-app-development-finance' />
             )}
           </div>
         </Flex>

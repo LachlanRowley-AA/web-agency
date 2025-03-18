@@ -19,6 +19,7 @@ import { motion } from 'motion/react';
 import NextImage from 'next/image';
 import classes from './hero-03.module.css';
 import clsx from 'clsx';
+import { IconPencil } from '@tabler/icons-react';
 
 const INTEREST_RATE = 15.95 / 100; // 15.95% annual interest
 const WEEKS_IN_YEAR = 52;
@@ -83,6 +84,7 @@ export const Hero03 = ({
                     },
                   }}
                 />
+                <IconPencil/>
               </span>
             </JumboTitle>
 

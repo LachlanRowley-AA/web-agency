@@ -60,7 +60,7 @@ export const Hero03 = ({
                 <span style={{ color: '#01E194' }}>STOP PRICE OBJECTIONS</span>
               </JumboTitle>
               <JumboTitle ta="center" order={1} fz="md">
-                DON'T SAY 
+                DON'T SAY $
                 <TextInput
                   value={loanAmount}
                   onChange={(e) => setLoanAmount(Number(e.target.value))}

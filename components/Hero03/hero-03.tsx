@@ -43,7 +43,7 @@ export const Hero03 = ({
   const weeklyRepayment = calculateWeeklyRepayment(loanAmount);
 
   return (
-    <Container pos="relative" h="60vh" mah={500} fluid>
+    <Container pos="relative" h="60vh" mah={600} fluid>
       <Container
         component="section"
         h="60vh"

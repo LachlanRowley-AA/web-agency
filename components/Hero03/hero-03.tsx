@@ -24,7 +24,7 @@ const INTEREST_RATE = 15.95 / 100; // 15.95% annual interest
 const WEEKS_IN_YEAR = 52;
 const LOAN_TERM_YEARS = 5; // Placeholder loan term in years
 
-const calculateWeeklyRepayment = (loanAmount) => {
+const calculateWeeklyRepayment = (loanAmount : number) => {
   if (loanAmount <= 0) {return 0};
   const totalPayments = LOAN_TERM_YEARS * WEEKS_IN_YEAR;
   const weeklyRate = INTEREST_RATE / WEEKS_IN_YEAR;
@@ -70,7 +70,7 @@ export const Hero03 = ({
                   variant="unstyled"
                   style={{
                     width: 'clamp(150px, 30vw, 350px)', 
-                    minWidth: '100px',
+                    minWidth: '200px',
                     textAlign: 'center',
                     display: 'inline-flex',
                     borderBottom: '2px solid var(--mantine-color-dark-2)', // Underline added here

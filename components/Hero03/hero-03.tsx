@@ -25,6 +25,11 @@ const INTEREST_RATE = 15.95 / 100; // 15.95% annual interest
 const WEEKS_IN_YEAR = 52;
 const LOAN_TERM_YEARS = 5; // Placeholder loan term in years
 
+import localFont from 'next/font/local'
+
+const font = localFont({ src: '../../public/Cera Pro Regular.otf'});
+const boldFont = localFont({ src: '../../public/Cera Pro Bold.otf'});
+
 const calculateWeeklyRepayment = (loanAmount : number) => {
   if (loanAmount <= 0) {return 0};
   const totalPayments = LOAN_TERM_YEARS * WEEKS_IN_YEAR;
@@ -64,11 +69,15 @@ export const Hero03 = ({
         <Flex h="100%" align="center" justify="center">
           <Stack pt={{ base: 'md', sm: 0 }} align="center" gap="md" style={{ flexGrow: 1, width: '100%' }}>
             <motion.div initial={{ opacity: 0.0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <JumboTitle ta="center" order={1} fz="lg" mb="md">
-                <span style={{ color: '#01E194' }}>STOP PRICE OBJECTIONS</span>
+              <JumboTitle ta="center" order={2} fz="md" mb="md" style = {{ fontFamily: boldFont.style.fontFamily }}>
+
+              <span style={{ color: 'var(--mantine-color-black)' }}>Web Design and App Development Agencies</span>
+
+                <span style={{ color: '#01E194' }}><br/>Stop Price Objections </span><br/>
+
               </JumboTitle>
-              <JumboTitle ta="center" order={1} fz="md">
-              DON'T SAY&nbsp;  
+              <JumboTitle ta="center" order={1} fz="md" style= {{ fontFamily: font.style.fontFamily }}>
+              Don't Say&nbsp;  
               <span style={{ display: 'inline-flex', alignItems: 'center' }}>
                 <span style={{ fontSize: 'clamp(42px, 5vw, 70px)', color: 'var(--mantine-color-dark-2)' }}>$</span>
                 <TextInput
@@ -96,7 +105,7 @@ export const Hero03 = ({
             </JumboTitle>
 
               <JumboTitle ta="center" order={1} fz="md">
-                SAY <span style={{ color: '#01E194' }}>${weeklyRepayment}</span> A WEEK
+                Say <span style={{ color: '#01E194' }}>${weeklyRepayment}</span> a Week
               </JumboTitle>
             </motion.div>
             <motion.div initial={{ opacity: 0.0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.4, ease: 'easeInOut' }} viewport={{ once: true }}>

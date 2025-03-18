@@ -16,7 +16,9 @@ import {
 import { useForm } from '@mantine/form';
 import { JumboTitle } from '../Jumbo-Title/jumbo-title';
 import NextImage from 'next/image';
-import { InlineWidget } from 'react-calendly';
+import { InlineWidget, useCalendlyEventListener } from 'react-calendly';
+import { useRouter } from 'next/navigation';
+
 import classes from './contact.module.css';
 
 const checkboxQs = [
@@ -47,6 +49,14 @@ export function AuthenticationForm() {
   const handleCheckboxChange = (value : any) => {
     setSelectedCheckboxes(value);
   };
+
+
+  const router = useRouter();
+  useCalendlyEventListener({
+    onEventScheduled: (e) => {
+      router.push('/thankyou')
+    }
+  })
 
   return (
     <div style={{ 

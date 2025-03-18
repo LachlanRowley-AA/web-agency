@@ -93,7 +93,7 @@ const FeatureCell = ({
           </Flex>
           <Box>
             <Text fz="xl">{title}</Text>
-            <Text fz="md" c="dimmed">
+            <Text fz="md" c="dimmed" >
               {description}
             </Text>
           </Box>

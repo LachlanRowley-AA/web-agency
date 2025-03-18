@@ -54,35 +54,34 @@ export function AuthenticationForm({
       <Paper p="lg" shadow="xl" radius="xl" style={{ backgroundColor: 'white', width: '100%', maxWidth: 1200 }}>
         <Flex>
           <div style={{ flex: 1, paddingRight: '20px', display: 'flex', flexDirection: 'column' }}>
-            <JumboTitle order={3} fz="xs" ta="center" style={{ textWrap: 'balance' }} mb="lg">
-              Book a Call With Our Director
+            <LoadingOverlay visible={loading} />
+            <div style={{ minHeight: '100px' }}>
+              <Checkbox.Group value={selectedCheckboxes} onChange={handleCheckboxChange}>
+                <Stack gap='xs'>
+                  {checkboxQs.map((item) => (
+                    <Checkbox.Card className={classes.root} radius="md" value={item.name} key={item.name}>
+                      <Group wrap="nowrap" align="flex-start">
+                        <Checkbox.Indicator />
+                        <div>
+                          <Text fz='xl' className={classes.label}>{item.name}</Text>
+                        </div>
+                      </Group>
+                    </Checkbox.Card>
+                  ))}
+                </Stack>
+              </Checkbox.Group>
+            </div>
+            <JumboTitle order={3} fz="xs" ta="center" style={{ textWrap: 'balance' }} mt="lg">
+              Then book a call with our director
             </JumboTitle>
-                <LoadingOverlay visible={loading} />
-                <div style={{ minHeight: '100px' }}>
-                  <Checkbox.Group value={selectedCheckboxes} onChange={handleCheckboxChange}>
-                    <Stack gap='xs'>
-                      {checkboxQs.map((item) => (
-                        <Checkbox.Card className={classes.root} radius="md" value={item.name} key={item.name}>
-                          <Group wrap="nowrap" align="flex-start">
-                            <Checkbox.Indicator />
-                            <div>
-                              <Text className={classes.label}>{item.name}</Text>
-                            </div>
-                          </Group>
-                        </Checkbox.Card>
-                      ))}
-                    </Stack>
-                  </Checkbox.Group>
-                </div>
+
                 <div style={{ marginTop: '10px', alignItems: 'center', gap: '10px' }}>
                 <NextImage src='/louie.jpg' width={200} height={200} alt='Louie Dib' style={{ objectFit: 'cover', borderRadius: '100px' }} />
                 <NextImage src='/bba.png' width={200} height={200} alt='BBA Logo' />
               </div>
           </div>
-          <div style={{ flex: 1.5, minWidth: '50%', visibility: selectedCheckboxes.length === checkboxQs.length ? 'visible' : 'hidden', height: selectedCheckboxes.length === checkboxQs.length ? 'auto' : '0' }}>
-            {selectedCheckboxes.length === checkboxQs.length && (
-              <InlineWidget url='https://calendly.com/louiedib/website-app-development-finance' />
-            )}
+          <div style={{ flex: 1.5, minWidth: '50%', height: 'auto'}}>
+               <InlineWidget url='https://calendly.com/louiedib/website-app-development-finance' />
           </div>
         </Flex>
       </Paper>

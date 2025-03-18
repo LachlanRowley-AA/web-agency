@@ -76,7 +76,7 @@ export function AuthenticationForm({
                 </div>
                 <div style={{ marginTop: '10px', alignItems: 'center', gap: '10px' }}>
                 <NextImage src='/louie.jpg' width={200} height={200} alt='Louie Dib' style={{ objectFit: 'cover', borderRadius: '100px' }} />
-                <NextImage src='/bba.png' width={100} height={100} alt='BBA Logo' />
+                <NextImage src='/bba.png' width={200} height={200} alt='BBA Logo' />
               </div>
           </div>
           <div style={{ flex: 1.5, minWidth: '50%', visibility: selectedCheckboxes.length === checkboxQs.length ? 'visible' : 'hidden', height: selectedCheckboxes.length === checkboxQs.length ? 'auto' : '0' }}>

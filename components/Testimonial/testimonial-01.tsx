@@ -29,7 +29,7 @@ const TESTIMONIALS: Testimonial[] = [
     `,
 
     name: "Jimmy O'Rourke",
-    imageUrl: '',
+    imageUrl: '/james.jpg',
     company: 'Worksite Insight',
     alt: "Jimmy O'Rourke",
   },
@@ -37,7 +37,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:`
     Just wanted to say a huge thank you Asset Alley team for your help I needed to grow my business. You answered all my questions and I was very happy with the quick and transparent process. Look forward to working together in the future!`,
     name:'George Ektoros',
-    imageUrl: '',
+    imageUrl: '/george.webp',
     company: 'GPS Vehicle Inspections',
     alt: 'George Ektoros'
 

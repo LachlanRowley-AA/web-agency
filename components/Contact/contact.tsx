@@ -51,7 +51,7 @@ export function AuthenticationForm({
 
   return (
     <div style={{ minHeight: '65vh', backgroundColor: '#e5e5e5', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
-      <Paper p="lg" shadow="xl" radius="xl" style={{ backgroundColor: 'white', width: '100%', maxWidth: 1200 }}>
+      <Paper p="lg" shadow="xl" radius="xl" style={{ backgroundColor: 'white', width: '100%', maxWidth: 800 }}>
         <Flex>
           <div style={{ flex: 1, paddingRight: '20px', display: 'flex', flexDirection: 'column' }}>
             <LoadingOverlay visible={loading} />
@@ -76,12 +76,29 @@ export function AuthenticationForm({
             </JumboTitle>
               <div style={{ flex: 1.5, minWidth: '50%', height: '100%'}}>
                 <InlineWidget url='https://calendly.com/louiedib/website-app-development-finance' />
-            </div>
-
-                <div style={{ marginTop: '10px', alignItems: 'center', gap: '10px' }}>
-                <NextImage src='/louie.jpg' width={200} height={200} alt='Louie Dib' style={{ objectFit: 'cover', borderRadius: '100px' }} />
-                <NextImage src='/bba.png' width={200} height={200} alt='BBA Logo' />
               </div>
+              <div style={{ 
+                marginTop: '10px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                gap: '10px' 
+              }}>
+                <NextImage 
+                  src='/louie.jpg' 
+                  width={200} 
+                  height={200} 
+                  alt='Louie Dib' 
+                  style={{ objectFit: 'cover', borderRadius: '100px' }} 
+                />
+                <NextImage 
+                  src='/bba.png' 
+                  width={200} 
+                  height={200} 
+                  alt='BBA Logo' 
+                />
+              </div>
+
           </div>
         </Flex>
       </Paper>

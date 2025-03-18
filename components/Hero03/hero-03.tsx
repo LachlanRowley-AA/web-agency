@@ -56,11 +56,13 @@ export const Hero03 = ({
   };
 
   return (
-    <Container pos="relative" h="70vh" mah={600} fluid>
+    <Container pos="relative" h="100vh" mah={600} fluid>
       <Container
         component="section"
-        h="60vh"
-        mah={500}
+        h={{sm:"80vh",
+            md: "60vh"
+        }}
+        mah={800}
         mx="auto"
         size="xl"
         style={{ width: 'fit-content', maxWidth: '100%', minWidth: '300px' }}
@@ -69,13 +71,21 @@ export const Hero03 = ({
         <Flex h="100%" align="center" justify="center">
           <Stack pt={{ base: 'md', sm: 0 }} align="center" gap="md" style={{ flexGrow: 1, width: '100%' }}>
             <motion.div initial={{ opacity: 0.0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <JumboTitle ta="center" order={2} fz="md" mb="md" style = {{ fontFamily: boldFont.style.fontFamily }}>
+              <JumboTitle ta="center" order={2} fz="md" mb="md" style = {{ fontFamily: boldFont.style.fontFamily }} visibleFrom='lg'>
 
               <span style={{ color: 'var(--mantine-color-black)' }}>Web Design and App Development Agencies</span>
 
                 <span style={{ color: '#01E194' }}><br/>Stop Price Objections </span><br/>
 
               </JumboTitle>
+              <JumboTitle ta="center" order={3} fz="xs" mb="md" style = {{ fontFamily: boldFont.style.fontFamily }} hiddenFrom='lg'>
+
+                <span style={{ color: 'var(--mantine-color-black)' }}>Web and App Development Agencies</span>
+
+                <span style={{ color: '#01E194' }}><br/>Stop Price Objections </span><br/>
+
+              </JumboTitle>
+
               <JumboTitle ta="center" order={1} fz="md" style= {{ fontFamily: font.style.fontFamily }}>
               Don't Say&nbsp;  
               <span style={{ display: 'inline-flex', alignItems: 'center' }}>

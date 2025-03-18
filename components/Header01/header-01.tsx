@@ -25,9 +25,8 @@ export type HeaderLink = {
 }
 
 const HEADER_LINKS: HeaderLink[] = [
-    { label: 'Benefits', href: '/benefits'},
-    { label: 'Testimonials', href: 'testimonials'},
-    { label: 'Contact Us', href: '/contact'}
+  { label: 'Benefits', href: 'benefits' },
+  { label: 'Testimonials', href: 'testimonials' },
 ];
 
 type Header01Props = ContainerProps & {
@@ -55,7 +54,14 @@ type Header01Props = ContainerProps & {
     /** Border radius of the header */
     radius?: MantineRadius | number;
 };
-  
+
+const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
 export const Header01 = ({
     style,
     breakpoint = 'xs',
@@ -68,7 +74,7 @@ export const Header01 = ({
         />
     ),
     callToActionTitle = 'Book a Call',
-    callToActionUrl = '#',
+    callToActionUrl = 'contact',
     links = HEADER_LINKS,
     onMenuToggle,
     isMenuOpen,
@@ -116,10 +122,11 @@ export const Header01 = ({
                 <Anchor
                     key={link.href}
                     className={classes.link}
-                    href={link.href}
-                    component={NextLink}
-                    td="none"
-                >
+                    onClick={(e) => {
+                        e.preventDefault(); // Prevent default link behavior
+                        scrollToSection(link.href);
+                    }
+                    }>
                     {link.label}
                 </Anchor>
             ))}
@@ -132,6 +139,10 @@ export const Header01 = ({
             radius="xl"
             rightSection={<IconArrowRight size={16} />}
             style={{ flexShrink: 0 }}
+            onClick={(e) => {
+                e.preventDefault(); // Prevent default link behavior
+                scrollToSection(callToActionUrl);
+            }}
             >
             {callToActionTitle}
         </Button>

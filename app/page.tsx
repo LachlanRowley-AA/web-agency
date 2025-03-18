@@ -13,14 +13,14 @@ import { Difference } from '@/components/Difference/difference';
 export default function HomePage() {
   return (
     <>
-      <Header01/>      
-      <Hero03/>
-      <Feature02/>
-      <Difference/>
-      <FAQ/>
-      <Testimonial01/>
-      <Logos03/>
-      <AuthenticationForm/>
+      <section><Header01/></section>      
+      <section id='home'><Hero03/></section>
+      <section id='benefits'><Feature02/></section>
+      <section><Difference/></section>
+      <section><FAQ/></section>
+      <section id='testimonials'><Testimonial01/></section>
+      <section><Logos03/></section>
+      <section id='contact'><AuthenticationForm/></section>
     </>
   );
 }

@@ -25,7 +25,7 @@ const INTEREST_RATE = 15.95 / 100; // 15.95% annual interest
 const WEEKS_IN_YEAR = 52;
 const LOAN_TERM_YEARS = 5; // Placeholder loan term in years
 
-const calculateWeeklyRepayment = (loanAmount : number) => {
+const calculateWeeklyRepayment = (loanAmount) => {
   if (loanAmount <= 0) {return 0};
   const totalPayments = LOAN_TERM_YEARS * WEEKS_IN_YEAR;
   const weeklyRate = INTEREST_RATE / WEEKS_IN_YEAR;
@@ -42,6 +42,13 @@ export const Hero03 = ({
 }) => {
   const [loanAmount, setLoanAmount] = useState(20000);
   const weeklyRepayment = calculateWeeklyRepayment(loanAmount);
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    if (/^\d*$/.test(value)) { // Allow only numbers
+      setLoanAmount(Number(value));
+    }
+  };
 
   return (
     <Container pos="relative" h="70vh" mah={600} fluid>
@@ -66,7 +73,7 @@ export const Hero03 = ({
                 <span style={{ fontSize: 'clamp(42px, 5vw, 70px)', color: 'var(--mantine-color-dark-2)' }}>$</span>
                 <TextInput
                   value={loanAmount}
-                  onChange={(e) => setLoanAmount(Number(e.target.value))}
+                  onChange={handleInputChange}
                   size="xl"
                   variant="unstyled"
                   style={{

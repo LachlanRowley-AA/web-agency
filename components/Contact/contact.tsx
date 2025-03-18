@@ -50,7 +50,7 @@ export function AuthenticationForm({
   };
 
   return (
-    <div style={{ minHeight: '65vh', backgroundColor: '#f4f4f4', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+    <div style={{ minHeight: '65vh', backgroundColor: '#e5e5e5', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
       <Paper p="lg" shadow="xl" radius="xl" style={{ backgroundColor: 'white', width: '100%', maxWidth: 1200 }}>
         <Flex>
           <div style={{ flex: 1, paddingRight: '20px', display: 'flex', flexDirection: 'column' }}>
@@ -74,14 +74,14 @@ export function AuthenticationForm({
             <JumboTitle order={3} fz="xs" ta="center" style={{ textWrap: 'balance' }} mt="lg">
               Then book a call with our director
             </JumboTitle>
+              <div style={{ flex: 1.5, minWidth: '50%', height: '100%'}}>
+                <InlineWidget url='https://calendly.com/louiedib/website-app-development-finance' />
+            </div>
 
                 <div style={{ marginTop: '10px', alignItems: 'center', gap: '10px' }}>
                 <NextImage src='/louie.jpg' width={200} height={200} alt='Louie Dib' style={{ objectFit: 'cover', borderRadius: '100px' }} />
                 <NextImage src='/bba.png' width={200} height={200} alt='BBA Logo' />
               </div>
-          </div>
-          <div style={{ flex: 1.5, minWidth: '50%', height: 'auto'}}>
-               <InlineWidget url='https://calendly.com/louiedib/website-app-development-finance' />
           </div>
         </Flex>
       </Paper>

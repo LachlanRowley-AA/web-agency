@@ -56,7 +56,7 @@ export const Hero03 = ({
   };
 
   return (
-    <Container pos="relative" h="100vh" mah={600} fluid>
+    <Container pos="relative" h="100vh" mah={600} fluid mt='xl' mb='xl'>
       <Container
         component="section"
         h={{sm:"80vh",
@@ -78,15 +78,14 @@ export const Hero03 = ({
                 <span style={{ color: '#01E194' }}><br/>Stop Price Objections </span><br/>
 
               </JumboTitle>
-              <JumboTitle ta="center" order={3} fz="xs" mb="md" style = {{ fontFamily: boldFont.style.fontFamily }} hiddenFrom='lg'>
+              <JumboTitle ta="center" order={3} fz="xs" mb="xl" style = {{ fontFamily: boldFont.style.fontFamily }} hiddenFrom='lg'>
 
-                <span style={{ color: 'var(--mantine-color-black)' }}>Web and App Development Agencies</span>
-
+                <span style={{ color: 'var(--mantine-color-black)'}}>Web and App Development Agencies</span>
                 <span style={{ color: '#01E194' }}><br/>Stop Price Objections </span><br/>
 
               </JumboTitle>
 
-              <JumboTitle ta="center" order={1} fz="md" style= {{ fontFamily: font.style.fontFamily }}>
+              <JumboTitle ta="center" order={1} fz="md" pt='xl' style= {{ fontFamily: font.style.fontFamily }}>
               Don't Say&nbsp;  
               <span style={{ display: 'inline-flex', alignItems: 'center' }}>
                 <span style={{ fontSize: 'clamp(42px, 5vw, 70px)', color: 'var(--mantine-color-dark-2)' }}>$</span>

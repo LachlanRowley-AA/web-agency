@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body>
         <MantineProvider theme={theme}>{children}</MantineProvider>
-        <LinkedInInsightTag partnerId='7094580'/>
+        <LinkedInInsightTag/>
       </body>
     </html>
   );

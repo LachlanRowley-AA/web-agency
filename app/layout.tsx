@@ -3,6 +3,7 @@ import '@mantine/core/styles.css';
 import React from 'react';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
+import { LinkedInInsightTag} from 'nextjs-linkedin-insight-tag'
 
 export const metadata = {
   title: 'Asset Alley',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body>
         <MantineProvider theme={theme}>{children}</MantineProvider>
+        <LinkedInInsightTag partnerId='7094580'/>
       </body>
     </html>
   );

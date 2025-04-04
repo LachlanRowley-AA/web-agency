@@ -65,18 +65,18 @@ export function AuthenticationForm() {
       display: 'flex', 
       justifyContent: 'center', 
       alignItems: 'center', 
-      padding: '20px' 
+      padding: '0px' 
     }}>
       <Paper p="lg" shadow="xl" radius="xl" style={{ 
         backgroundColor: 'white', 
         width: '100%', 
         maxWidth: '800px',
-        padding: '20px'
+        padding: '0px'
       }}>
         <Flex direction={{ base: 'column', sm: 'row' }} gap="lg">
           <div style={{ 
             flex: 1, 
-            paddingRight: '20px', 
+            paddingRight: '0px', 
             display: 'flex', 
             flexDirection: 'column',
             width: '100%'

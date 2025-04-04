@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
-        <GoogleTagManager gtmId='GTM-NFL2BXL4'/>
+        <GoogleTagManager gtmId='GTM-NRN7W3D3'/>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: any }) {
       <body>
         <MantineProvider theme={theme}>{children}</MantineProvider>
         <LinkedInInsightTag/>
-        <GoogleAnalytics gaId='G-NRN7W3D3'/>
+        <GoogleAnalytics gaId='G-WBXBDB7NKQ'/>
       </body>
     </html>
   );

@@ -25,6 +25,7 @@
     "@mantine/hooks": "7.17.1",
     "@next/bundle-analyzer": "^15.1.5",
     "@next/font": "^14.2.15",
+    "@next/third-parties": "^15.2.4",
     "@supabase/supabase-js": "^2.49.1",
     "@tabler/icons-react": "^3.31.0",
     "@types/react-motion": "^0.0.40",

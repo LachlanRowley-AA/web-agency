@@ -1,5 +1,8 @@
 import '@mantine/core/styles.css';
 
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
+
+
 import React from 'react';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
@@ -14,6 +17,7 @@ export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
+        <GoogleTagManager gtmId='GTM-NFL2BXL4'/>
         <ColorSchemeScript />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
@@ -24,6 +28,7 @@ export default function RootLayout({ children }: { children: any }) {
       <body>
         <MantineProvider theme={theme}>{children}</MantineProvider>
         <LinkedInInsightTag/>
+        <GoogleAnalytics gaId='G-NRN7W3D3'/>
       </body>
     </html>
   );

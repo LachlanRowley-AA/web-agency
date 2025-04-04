@@ -17,10 +17,14 @@ import NextImage from 'next/image'
 import dsigns from '../../public/dsigns-logo.webp';
 import creades from '../../public/creades-logo.webp';
 import endspace from '../../public/endspace.png';
+import dijgtal from '../../public/Dijgtal.svg';
 
 const ITEMS = [
   <Group key="branding" wrap="nowrap">
     <NextImage src='the-branding-lab-logo.svg' height={100} width={300} alt='the-branding-lab' />
+  </Group>,
+    <Group key="branding" wrap="nowrap">
+    <NextImage src={dijgtal} height={100} width={300} alt='the-branding-lab' />
   </Group>,
   <Group key="born" wrap="nowrap">
     <NextImage src='born-creators.svg' height={80} width={150} alt='born' />

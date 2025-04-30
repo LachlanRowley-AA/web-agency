@@ -18,13 +18,14 @@ import dsigns from '../../public/dsigns-logo.webp';
 import creades from '../../public/creades-logo.webp';
 import endspace from '../../public/endspace.png';
 import dijgtal from '../../public/Dijgtal.svg';
+import brandlab from '../../public/BRANDLAB-LOGO-white.png';
 
 const ITEMS = [
   <Group key="branding" wrap="nowrap">
     <NextImage src='the-branding-lab-logo.svg' height={100} width={300} alt='the-branding-lab' />
   </Group>,
-    <Group key="branding" wrap="nowrap">
-    <NextImage src={dijgtal} height={100} width={300} alt='the-branding-lab' />
+    <Group key="dijgtal" wrap="nowrap">
+    <NextImage src={dijgtal} height={100} width={300} alt='dijgtal' />
   </Group>,
   <Group key="born" wrap="nowrap">
     <NextImage src='born-creators.svg' height={80} width={150} alt='born' />
@@ -32,12 +33,15 @@ const ITEMS = [
   <Group key="dsigns" wrap="nowrap">
     <NextImage src={dsigns} height={50} width={150} alt='dsigns' />
   </Group>,
-  <Group key="creades" wrap="nowrap">
+  <Group key="brandlab" wrap="nowrap">
+  <NextImage src={brandlab} height={40} width={200} alt='brand lab' />
+</Group>,
+<Group key="creades" wrap="nowrap">
     <NextImage src={creades} height={50} width={150} alt='creades' />
     </Group>,
   <Group key="endspace" wrap="nowrap">
     <NextImage src={endspace} height={40} width={150} alt='endspace' />
-    </Group>,
+  </Group>,
 ];
 
 export type Logos03Props = ContainerProps & {

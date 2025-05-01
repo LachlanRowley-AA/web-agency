@@ -24,8 +24,8 @@ export const Embed = () => (
         order={2}
         fz="md"
         style={{ textWrap: 'balance' }}
-        pr="calc(var(--mantine-spacing-xl) * 2)"
         mb="xl"
+        ta="center"
       >
         How we help agencies
       </JumboTitle>

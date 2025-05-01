@@ -37,7 +37,7 @@ export const Difference = () => (
     <Container
       size="lg"
       px={{
-        base: 'xl',
+        base: 0,
         lg: 0,
       }}
     >
@@ -52,9 +52,8 @@ export const Difference = () => (
           <JumboTitle
             order={2}
             fz="md"
-            style={{ textWrap: 'balance' }}
-            pr="calc(var(--mantine-spacing-xl) * 4)"
-            mb="sm"
+            mb="lg"
+            ta = "center"
           >
             What Makes Asset Alley Different
           </JumboTitle>

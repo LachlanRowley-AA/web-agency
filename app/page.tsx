@@ -9,6 +9,7 @@ import { Logos03 } from '@/components/AnimatedLogos/AnimatedLogos';
 import { FAQ } from '@/components/FAQ/faq';
 import { Difference } from '@/components/Difference/difference';
 import { Footer01 } from './footer/footer';
+import { Embed } from '@/components/Embed Video/embed';
 
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
       <section id='home'><Hero03/></section>
       <section id='benefits'><Feature02/></section>
       <section><Difference/></section>
+      <section><Embed/></section>
       <section><FAQ/></section>
       {/* <section id='testimonials'><Testimonial01/></section> */}
       <section><Logos03/></section>

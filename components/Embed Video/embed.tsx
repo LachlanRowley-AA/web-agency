@@ -33,15 +33,16 @@ export const Embed = () => (
         justify="center"
         align="center"
         style={{
-          height: '60vh',
+          height: '20vh',
         }}
         // Override for small screens using Mantine's responsive system
         mih={{
-          base: '30vh', // Mobile
+          base: '40vh', // Mobile
           sm: '40vh',   // Small screens
           md: '50vh',   // Medium screens
           lg: '60vh',   // Large and up
         }}
+        
       >
         <iframe
           width="100%"

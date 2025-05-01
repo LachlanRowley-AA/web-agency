@@ -8,7 +8,11 @@ export const Embed = () => (
   <Container
     bg="var(--mantine-color-white)"
     size="xl"
-    px={0}
+    px={{
+      base: 'calc(var(--mantine-spacing-lg) * 0)',
+      xs: 'calc(var(--mantine-spacing-lg) * 3)',
+      lg: 'calc(var(--mantine-spacing-lg) * 24)',
+    }}
     py={{
       base: 'calc(var(--mantine-spacing-lg) * 3)',
       xs: 'calc(var(--mantine-spacing-lg) * 3)',
@@ -16,13 +20,6 @@ export const Embed = () => (
     }}
     fluid
   >
-    <Container
-      size="lg"
-      px={{
-        base: 'xl',
-        lg: 0,
-      }}
-    >
       <JumboTitle
         order={2}
         fz="md"
@@ -47,7 +44,7 @@ export const Embed = () => (
         }}
       >
         <iframe
-          width="80%"
+          width="100%"
           height="100%"
           src="https://www.youtube.com/embed/jEBfPn23QrM"
           title="How We Help Agencies"
@@ -58,5 +55,4 @@ export const Embed = () => (
         />
       </Flex>
     </Container>
-  </Container>
 );

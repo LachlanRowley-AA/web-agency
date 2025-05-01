@@ -60,7 +60,7 @@ export function AuthenticationForm() {
 
   return (
     <div style={{ 
-      minHeight: '100vh',
+      minHeight: '80vh',
       backgroundColor: 'white', 
       display: 'flex', 
       justifyContent: 'center', 
@@ -68,9 +68,8 @@ export function AuthenticationForm() {
       padding: '0px',
       marginTop: '30px',
     }}>
-      <Flex direction={{ base: 'column', sm: 'row' }} gap="lg" style={{ width: '100%' }}>
+      <Flex direction={{ base: 'column', sm: 'row' }} gap="lg" style={{ width: '1200px' }}>
         <div style={{ 
-          flex: 1, 
           paddingRight: '0px', 
           display: 'flex', 
           flexDirection: 'column',
@@ -97,12 +96,10 @@ export function AuthenticationForm() {
             Then book a call with our director
           </JumboTitle>
           <div style={{ 
-            flex: 1.5, 
             width: '100%',
             margin: '0 auto',
-            minHeight: '750px',
           }}>
-            <InlineWidget url='https://calendly.com/louiedib/website-app-development-finance' />
+            <InlineWidget url='https://calendly.com/louiedib/website-app-development-finance' styles={{height: '700px'}}/>
           </div>
           <div style={{ 
             marginTop: '10px', 

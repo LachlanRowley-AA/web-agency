@@ -9,7 +9,7 @@ export const Embed = () => (
     bg="var(--mantine-color-white)"
     size="xl"
     px={{
-      base: 'calc(var(--mantine-spacing-lg) * 0)',
+      base: 'calc(var(--mantine-spacing-lg) * 1)',
       xs: 'calc(var(--mantine-spacing-lg) * 3)',
       lg: 'calc(var(--mantine-spacing-lg) * 24)',
     }}

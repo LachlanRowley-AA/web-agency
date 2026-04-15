@@ -31,7 +31,7 @@
     "@types/react-motion": "^0.0.40",
     "@vercel/analytics": "^1.5.0",
     "motion": "^12.5.0",
-    "next": "15.1.5",
+    "next": "15.5.15",
     "nextjs-linkedin-insight-tag": "^0.0.6",
     "nxt": "^0.0.0",
     "react": "^19.0.0",
@@ -41,7 +41,7 @@
     "supabase": "^2.19.6",
     "tabler": "^1.0.0",
     "tabler-icons-react": "^1.56.0",
-    "validator": "^13.12.0"
+    "validator": "^13.15.22"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -69,7 +69,7 @@
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.4.2",
-    "storybook": "^8.5.0",
+    "storybook": "^8.6.17",
     "storybook-dark-mode": "^4.0.2",
     "stylelint": "^16.13.2",
     "stylelint-config-standard-scss": "^14.0.0",
